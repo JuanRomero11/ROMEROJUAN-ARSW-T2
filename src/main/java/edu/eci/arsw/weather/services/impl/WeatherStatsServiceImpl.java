@@ -13,6 +13,14 @@ import org.springframework.stereotype.Service;
 public class WeatherStatsServiceImpl implements WeatherStatsService {
     @Autowired
     private HttpWeatherServiceI weatherService;
+    /**
+     * se obtendran los datos de la API openweathermap para poder realizar el mapeo 
+     * a las clases del model ya creadas y poder manejar los datos mas facilmente, esta funcion
+     * retorna un objeto de tipo City el cual contiene toda la informacion meteorologica de la ciudad.
+     *
+     * @param name nombre de la ciudad
+     * @return City cityWeather
+     */
     @Override
     public City getStatsByCity(String name) throws UnirestException {
         City cityWeather = new City();
@@ -34,12 +42,23 @@ public class WeatherStatsServiceImpl implements WeatherStatsService {
         cityWeather.setVisibility(object.getInt("visibility"));
         return cityWeather;
     }
-
+    /**
+     * metodo que nos ayudaa traer los datos tipo JSON de la ciudad 
+     *
+     * @param objectWeater objeto json
+     * @return Weather datos del clima
+     */
     private Weather mapWeather(JSONObject objectWeater) {
-        Gson gson = new Gson();
-        return gson.fromJson(objectWeater.toString(),Weather.class);
+        Gson datos = new Gson();
+        return datos.fromJson(objectWeater.toString(),Weather.class);
     }
-    
+    /**
+     * metodo que nos ayuda para realizar el mapeo de los datos de entrada tipo JSON
+     *
+     * @param objectName nombre del objeto
+     * @param object objeto JSON con los datos
+     * @return objectClass clase en la que vamos a mapear los datos
+     */
     private <T> T formatObject(String objectName, JSONObject object, Class objectClass){
         Gson gson = new Gson();
         String stringObject =  object.getJSONObject(objectName).toString();

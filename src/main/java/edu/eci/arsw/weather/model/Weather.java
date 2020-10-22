@@ -4,14 +4,20 @@ public class Weather {
     private int id;
     private String main;
     private String description;
-
+    /**
+     * constructor o instacia de Weather
+     */
     public Weather() {
     }
 
     public int getId() {
         return id;
     }
-
+    /**
+     * cambiar Id.
+     *
+     * @param id nuevo id
+     */
     public void setId(int id) {
         this.id = id;
     }
@@ -19,7 +25,7 @@ public class Weather {
     public String getMain() {
         return main;
     }
-
+    
     public void setMain(String main) {
         this.main = main;
     }
@@ -27,8 +33,12 @@ public class Weather {
     public String getDescription() {
         return description;
     }
-
-    public void setDescription(String description) {
+    /**
+     * cambiar descripcion.
+     *
+     * @param description nueva descripcion
+     */
+    public void	 setDescription(String description) {
         this.description = description;
     }
 }
