@@ -1,5 +1,6 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
-
+## Juan Guillermo Romero
+## 2020-2
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
@@ -135,5 +136,4 @@ document.getElementById("demo").innerHTML = "name: " + obj.name + ", age: " + ob
 
 ```
 
-* Código de página con Mapa embebido [(Ver archivo)](index.html)
-    
+* Código de página con Mapa embebido [(Ver archivo)](src/main/resources/static/index.html)
