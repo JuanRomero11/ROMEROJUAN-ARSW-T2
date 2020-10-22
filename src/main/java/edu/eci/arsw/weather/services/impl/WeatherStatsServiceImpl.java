@@ -18,12 +18,15 @@ public class WeatherStatsServiceImpl implements WeatherStatsService {
         City cityWeather = new City();
         JSONObject object = weatherService.getWeatherByCity(name);
         Coord coord = formatObject("coord",object,Coord.class);
+        Wind wind = formatObject("wind",object,Wind.class);
+
         Clouds clouds = formatObject("clouds",object,Clouds.class);
         MainStats mainStats = formatObject("main",object,MainStats.class);
         JSONObject objectWeather = object.getJSONArray("weather").getJSONObject(0);
         Weather weather = mapWeather(objectWeather);
         cityWeather.setCoord(coord);
         cityWeather.setWeather(weather);
+        cityWeather.setWind(wind);
         cityWeather.setClouds(clouds);
         cityWeather.setName(object.getString("name"));
         cityWeather.setTimezone(object.getInt("timezone"));

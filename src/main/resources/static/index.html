@@ -4,7 +4,7 @@
         <title>Weather Stats</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="/webjars/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/apiclient.js"></script>
         <script src="js/app.js"></script>
@@ -14,7 +14,7 @@
     </head>
     <body>
 	<h2>Busqueda de Informacion Meteorologica</h2>
-	<div class="container register mt-4">
+	
         <div class="row">
             <div class="col-sm">
                 <form>
@@ -30,24 +30,37 @@
         <div class="container register mt-4">
             <div class="row">
                 <div class="col-sm">
-                    <h3 style="font-size:16px">Nombre:</h3>
-                    <h3 style="font-size:16px">Timezone:</h3>
-                    <h3 style="font-size:16px">Visibility:</h3>
-                </div>
-                <div class="col-sm">
-                    <h2 style="font-size:16px">Weather</h2>
-                    <table id="weather" class="table table-bordered table-light table-striped">
+                    <h2 style="font-size:16px">informacion basica</h2>
+                    <table id="cityinfo" class="table table-bordered table-light table-striped">
                         <thead>
-                            <tr>
-                                <th>State</th>
-                                <th>Description</th>
-                            </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Timezone</th>
+                            <th>coord long</th>
+                            <th>coord lat</th>
+                            <th>Visibility</th>
+                            <th>all clouds</th>
+                            <th>cod</th>
+                            <th>speed wind</th>
+                            <th>deg wind</th>
+                        </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
-            
+                <div class="col-sm">
+                    <h2 style="font-size:16px">Clima</h2>
+                    <table id="clima" class="table table-bordered table-light table-striped">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>main</th>
+                            <th>description</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
         </div>
 
     </div>
