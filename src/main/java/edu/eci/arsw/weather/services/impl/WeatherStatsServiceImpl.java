@@ -29,13 +29,14 @@ public class WeatherStatsServiceImpl implements WeatherStatsService {
         cityWeather.setTimezone(object.getInt("timezone"));
         cityWeather.setCod(object.getInt("cod"));
         cityWeather.setVisibility(object.getInt("visibility"));
-        return null;
+        return cityWeather;
     }
 
     private Weather mapWeather(JSONObject objectWeater) {
         Gson gson = new Gson();
         return gson.fromJson(objectWeater.toString(),Weather.class);
     }
+    
     private <T> T formatObject(String objectName, JSONObject object, Class objectClass){
         Gson gson = new Gson();
         String stringObject =  object.getJSONObject(objectName).toString();
