@@ -1,6 +1,12 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 ## Juan Guillermo Romero
 ## 2020-2
+## Integracion continua 
+
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://romerojuan-arsw2.herokuapp.com/)
+
+[![CircleCI](https://circleci.com/gh/JuanRomero11/ROMEROJUAN-ARSW-T2.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)](https://app.circleci.com/pipelines/github/JuanRomero11/ROMEROJUAN-ARSW-T2)
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
